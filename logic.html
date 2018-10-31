@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html html lang ="en">
 <!--
 
 First Website
@@ -26,7 +26,7 @@ in html
             <h1>Making a basic game</h1>
         </header>
         <nav>
-            <hr width="50%"/>
+            <hr/>
             <a href="index.html">Intro</a>
             <a href="rules.html">Rules</a>
             <a href="controls.html">Controls</a>
@@ -37,12 +37,12 @@ in html
         <h2>Main Logic and Variables</h2>
         <div id="content">
         And now onto the main component and what makes everything tick: the logic.
-        <br>
+        <br/>
         In making snake, we can use a 2 dimensional array of integers to represent segments of the snake, and food pellets. A way to go about doing this is by using -1 as a value for a pellet, 0 as an empty space, and anything 1 and above as a snake.
         <img id="IntroImg" src="img/snakegame1.png" alt="image of the game Snake"/>
         This image we saw on the intro page can be represented roughly as
 
-        <span class="codeblock"><blockquote><pre><code>00000000000000000000000000000000000000000000000000000000000000000000000000000000
+        <blockquote class="codeblock"><pre><code>00000000000000000000000000000000000000000000000000000000000000000000000000000000
 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 00000000000000000000123456789<em>10</em>00000000000000000000000000000000000000000000000000
@@ -52,16 +52,16 @@ in html
 0000000000000000000000000000000000000000000000000000000000000000000000000000-1000
 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-        </code></pre></blockquote></span>
-        <br>
-        <br>
+        </code></pre></blockquote>
+        <br/>
+        <br/>
         The head of the snake, as it moves, will set the value of a tile to the integer SnakeLength. This means it'll take that many "turns" for it to expire, which gives the illusion of the snake moving. 
         <br>When growing the snake, we can just increment SnakeLength and all body tiles (anything >= 1), by a fixed value GrowLength.
         The snake head can be represented using the following variables.
-        <span class="codeblock"><blockquote><pre><code>int X;
+        <blockquote class="codeblock"><pre><code>int X;
 int Y;
 int Direction;
-int SnakeLength</code></pre></blockquote></span>
+int SnakeLength</code></pre></blockquote>
 Our mainloop will consist of the following components:
         <ul>
             <li>Get player directional input (if it exists)</li>
